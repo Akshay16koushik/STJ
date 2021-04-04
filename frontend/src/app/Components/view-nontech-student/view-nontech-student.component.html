@@ -1,0 +1,88 @@
+<mat-card>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="studentRegisterNumber">
+      <th mat-header-cell *matHeaderCellDef>studentRegisterNumber. </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentRegisterNumber}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="studentName">
+      <th mat-header-cell *matHeaderCellDef> studentName </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentName}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="studentFatherName">
+      <th mat-header-cell *matHeaderCellDef> studentFatherName </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentFatherName}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="studentMotherName">
+      <th mat-header-cell *matHeaderCellDef> studentMotherName </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentMotherName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentSex">
+      <th mat-header-cell *matHeaderCellDef> studentSex </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentSex}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentBloodGroup">
+      <th mat-header-cell *matHeaderCellDef> studentBloodGroup  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentBloodGroup}} </td>
+    </ng-container>
+    <ng-container matColumnDef="parentNumber">
+      <th mat-header-cell *matHeaderCellDef> parentNumber  </th>
+      <td mat-cell *matCellDef="let element"> {{element.parentNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentParmanentAddress">
+      <th mat-header-cell *matHeaderCellDef> studentParmanentAddress  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentParmanentAddress}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentExistingAddress">
+      <th mat-header-cell *matHeaderCellDef> studentExistingAddress  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentExistingAddress}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentClass">
+      <th mat-header-cell *matHeaderCellDef> studentClass  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentClass}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentFee">
+      <th mat-header-cell *matHeaderCellDef> studentFee  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentFee}} </td>
+    </ng-container>
+    <ng-container matColumnDef="studentRemainingFee">
+      <th mat-header-cell *matHeaderCellDef> studentRemainingFee  </th>
+      <td mat-cell *matCellDef="let element"> {{element.studentRemainingFee}} </td>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="accent" (click)="onEdit(element)" >
+        <mat-icon class="mat-18">system_update</mat-icon>
+      </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="accent" (click)="ondelete(element)" >
+        <mat-icon class="mat-18">delete</mat-icon>
+      </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [length]="dataLength"
+      [pageSize]="5"
+      [pageSizeOptions]='[5,10,25,100]'>
+
+  </mat-paginator>
+
+</mat-card>

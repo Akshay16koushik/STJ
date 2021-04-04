@@ -1,0 +1,15 @@
+<mat-card>
+  <h1 style="text-align: center;">Login Page</h1>
+  <form (submit)="login(loginform)" #loginform="ngForm">
+    <mat-form-field>
+      <mat-label>Enter UserId:</mat-label>
+      <input matInput type="text" name="userid" placeholder="Enter your user Id" required ngModel #userid="ngModel">
+    </mat-form-field><br><br>
+    <mat-form-field>
+      <mat-label>Enter Password:</mat-label>
+      <input matInput type="password" name="userpassword" placeholder="Enter your user Id" required ngModel #userpassword="ngModel">
+    </mat-form-field><br><br><br>
+    <button mat-raised-button color="primary" type="submit">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="warn" type="reset">Clear</button>
+  </form>
+</mat-card>

@@ -1,0 +1,90 @@
+<div style="margin-left: 2%;margin-top: 2%;">
+  <button mat-mini-fab color="warm" aria-label="Example icon button with a filter ist icon" (click)="back()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<br><br>
+<mat-card >
+  <h1 style="text-align: center;" >Student personal Info</h1>
+  <form (submit)="onAddStudent(studentform)" #studentform="ngForm">
+    <mat-tab-group>
+      <mat-tab label="Detail 1">
+        <br>
+        <mat-form-field>
+         <mat-label>Register Number</mat-label>
+          <input matInput type="text" name="registernumber" placeholder="Enter register number" required ngModel #registernumber="ngModel">
+        </mat-form-field>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <mat-form-field>
+          <input matInput type="text" name="studentname" placeholder="Enter student  name" required ngModel #studentname="ngModel">
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Selcet student board</mat-label>
+          <mat-select [(ngModel)]="stuboard" name="studentboard" >
+            <mat-option *ngFor="let bd of board" [value]="bd">{{bd}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Selcet student age</mat-label>
+          <mat-select [(ngModel)]="currentage" name="studentage" >
+            <mat-option *ngFor="let ag of age" [value]="ag">{{ag}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br><br>
+        <mat-label>Gender</mat-label><br>
+        <mat-radio-group aria-label="Select an option" name="sex" required ngModel #sex="ngModel">
+          <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+          <mat-radio-button value="female">Female</mat-radio-button>&nbsp;
+          <mat-radio-button value="other">Other</mat-radio-button>&nbsp;
+        </mat-radio-group><br><br>
+        <mat-form-field >
+          <mat-label>Blood Group</mat-label>
+          <mat-select [(ngModel)]="bloodgroupval" name="bloodgroup" >
+            <mat-option  *ngFor="let bg of bloodgroup" [value]="bg">{{bg}}</mat-option>
+          </mat-select>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Selcet student class</mat-label>
+          <mat-select [(ngModel)]="classjoinsed" name="classassigned" >
+            <mat-option *ngFor="let cl of class" [value]="cl">{{cl}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br><br>
+      </mat-tab>
+      <mat-tab label="Detail 2">
+        <mat-form-field>
+          <input matInput type="text" name="fathername" placeholder="Enter father name" required ngModel #fathername="ngModel">
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <input matInput type="text" name="mothername" placeholder="Enter mother  name" required ngModel #mothername="ngModel">
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <textarea matInput name="parmanentaddress" placeholder="Enter your parmanant address" required ngModel #parmanentaddress="ngModel"></textarea>
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <textarea matInput name="existingaddress" placeholder="Enter your existing address" required ngModel #existingaddress="ngModel"></textarea>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Parent mobile Number</mat-label>
+           <input matInput type="text" name="parentnumber" placeholder="Enter parent mobile number" required ngModel #parentnumber="ngModel">
+         </mat-form-field><br><br>
+
+      </mat-tab>
+      <mat-tab label="Detail 3">
+        <mat-form-field>
+         <mat-label>Student Fee</mat-label>
+           <mat-select name="studentfee" ngModel #studentfee="ngModel" >
+             <mat-option value="Paid">Paid</mat-option>
+             <mat-option value="Partial Payment">Partial Payment</mat-option>
+             <mat-option value="Not Paid">Not Paid</mat-option>
+           </mat-select>
+         </mat-form-field><br><br>
+         
+
+        <button mat-raised-button color="accent" type="submit" style="text-align: center;">Register</button>
+      </mat-tab>
+    </mat-tab-group>
+  </form>
+</mat-card>

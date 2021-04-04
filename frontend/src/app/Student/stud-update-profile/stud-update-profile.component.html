@@ -1,0 +1,8 @@
+<mat-card>
+    <h1 style="text-align: center;">Your detail</h1>
+    <div *ngFor="let item of Studentdata | keyvalue">
+      {{item.key}}: &nbsp; {{item.value}}
+      <hr><br>
+    </div><br><br>
+</mat-card>
+

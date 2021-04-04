@@ -1,0 +1,63 @@
+  <div>
+  <button mat-mini-fab color="warm" aria-label="Example icon button with a filter ist icon" (click)="back()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<br><br>
+<mat-card>
+  <h1 style="text-align: center;" >Teacher Details</h1>
+  <form (submit)="onAddTeacher(studentform)" #studentform="ngForm">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" name="teachername" placeholder="Enter teacher  name" required ngModel #teachername="ngModel">
+        </mat-form-field><br><br>
+        <mat-label>Sex</mat-label><br>
+        <mat-radio-group aria-label="Select an option" name="sex" required ngModel #sex="ngModel">
+          <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+          <mat-radio-button value="female">Female</mat-radio-button>&nbsp;
+          <mat-radio-button value="other">Other</mat-radio-button>&nbsp;
+        </mat-radio-group><br><br>
+        <mat-form-field>
+          <mat-label>Selcet teacher subject</mat-label>
+          <mat-select multiple [(ngModel)]="subjecttaken" name="teachersubject" >
+            <mat-option *ngFor="let bd of subjects" [value]="bd">{{bd}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Selcet Teacher age</mat-label>
+          <mat-select [(ngModel)]="currentage" name="teacherage" >
+            <mat-option *ngFor="let ag of age" [value]="ag">{{ag}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br><br>
+        <mat-form-field >
+          <mat-label>Select teacher designation</mat-label>
+          <mat-select [(ngModel)]="designation" name="teacherdesignation" >
+            <mat-option  *ngFor="let bg of options" [value]="bg">{{bg}}</mat-option>
+          </mat-select>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Assign class</mat-label>
+          <mat-select multiple [(ngModel)]="takingcalss" name="teacherassignedclass" >
+            <mat-option *ngFor="let cl of classes" [value]="cl">{{cl}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br><br>
+        <mat-form-field>
+          <textarea matInput name="parmanentaddress" placeholder="Enter your parmanant address" required ngModel #parmanentaddress="ngModel"></textarea>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <mat-form-field>
+        <mat-label>Board</mat-label>
+        <mat-select [(ngModel)]="board" name="teacherBoard">
+          <mat-option *ngFor="let bord of teacherBoard" [value]="bord">{{bord}}</mat-option>
+         
+        </mat-select>
+       </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+           <input matInput type="text" name="phonenumber" placeholder="Enter phone number" required ngModel #phonenumber="ngModel">
+         </mat-form-field>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button mat-raised-button color="primary" type="submit">Register</button>
+  </form>
+</mat-card>

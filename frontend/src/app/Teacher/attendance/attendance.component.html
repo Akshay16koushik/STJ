@@ -1,0 +1,13 @@
+<mat-card>
+    <br>
+    <mat-form-field style="text-align: center;align-content: center;width: 20%;left: 35%;">
+        <mat-label>Selct the class</mat-label>
+        <mat-select color="primary">
+            <mat-option *ngFor ="let class of classes" [value]="class"  (click)="onChange(class)">{{class}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>
+<br><br>
+<mat-card>
+
+</mat-card>

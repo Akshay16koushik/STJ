@@ -1,0 +1,38 @@
+<mat-card>
+  <h1>Staff details</h1>
+  <form [formGroup]="StaffData" (ngSubmit)="AddStaff()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+     <mat-select matNativeControl required formControlName="sex">
+       <mat-option value="male">Male</mat-option>
+       <mat-option value="female">Female</mat-option>
+       <mat-option value="other">Other</mat-option>
+     </mat-select>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Select Date of birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="age" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Designation</mat-label>
+      <mat-select formControlName="designation" required>
+        <mat-option *ngFor="let des of options" value={{des}} >{{des}}</mat-option>
+      </mat-select>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="phno" required>
+    </mat-form-field><br><br><br>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input matInput type="textarea" formControlName="address" required>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" type="submit">Register</button>
+  </form>
+</mat-card>

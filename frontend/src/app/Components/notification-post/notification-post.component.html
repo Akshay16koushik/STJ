@@ -1,0 +1,10 @@
+<mat-card>
+    <h1 style="text-align: center;">Post Content to notification bar</h1>
+    <form (submit)="PostNotify(Notfyform)" #Notfyform="ngForm">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Enter the update" name="notify" required ngModel #notify="ngModel">
+        </mat-form-field><br><br>
+        <button mat-raised-button type="submit" color="primary" >Submit</button>&nbsp;&nbsp;
+        <button mat-raised-button type="reset" color="warn">Clear</button>
+    </form>
+</mat-card>

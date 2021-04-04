@@ -1,0 +1,38 @@
+<div>
+  <button mat-mini-fab color="warm" aria-label="Example icon button with a filter ist icon" (click)="back()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<br><br>
+<h1 style="text-align: center;" >Edit Non technical staff Details</h1>
+<mat-card>
+  
+  <form [formGroup]="formValues" (ngSubmit)="Editnontechstaff(formValues)" >
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput  formControlName="staffName"  required>
+        </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Sex</mat-label>
+          <input matInput  formControlName="staffSex"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Age</mat-label>
+          <input matInput formControlName="staffAge"  required>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Designation</mat-label>
+          <input matInput  formControlName="staffDesignation"  required>
+        </mat-form-field><br><br><br>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput  formControlName="staffAddress"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Phonenumber</mat-label>
+          <input matInput  formControlName="staffPhno"  required>
+        </mat-form-field><br><br>
+         <button mat-raised-button color="primary" type="submit">Update</button>&nbsp;&nbsp;
+         <button mat-raised-button color="warn" type="reset">Clear</button>
+  </form>
+</mat-card>
