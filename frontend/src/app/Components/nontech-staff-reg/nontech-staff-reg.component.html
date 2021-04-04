@@ -1,0 +1,19 @@
+<mat-card>
+  <h1 style="text-align: center;font-family:monospace;">Register</h1>
+  <form [formGroup]="formRegister" (ngSubmit)="Register()"> 
+    <mat-form-field>
+      <mat-label>User ID</mat-label>
+      <input matInput formControlName="userid">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password">
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>Confirm Password</mat-label>
+      <input matInput formControlName="confirmpassword">
+    </mat-form-field><br><br>
+    <button mat-raised-button color="warn" type="reset">Clear</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button color="primary" type="submit">Register</button>
+  </form>
+</mat-card>

@@ -1,0 +1,15 @@
+mat-sidenav-content {
+    height: 100vh;
+  }
+  button{
+      width: 100%;
+  }
+mat-sidenav{
+    width: 10%;
+}
+.hover:hover {
+    background:whitesmoke;
+}
+mat-button{
+    width: 2px;
+}

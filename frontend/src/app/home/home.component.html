@@ -1,0 +1,13 @@
+<p>
+    <mat-toolbar>
+      <span>S.T.J&nbsp;&nbsp;&nbsp;SCHOOL</span>&nbsp;&nbsp;
+      <button mat-button style="width: fit-content;text-align: right;" class="hover" [matMenuTriggerFor]="beforeMenu">Menu</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item   (click)="LoginPage()" color="primary">Login</button>
+        <button mat-menu-item (click)="RegisterPage()" >Register</button>
+</mat-menu>
+    </mat-toolbar>
+  </p>
+
+
+  

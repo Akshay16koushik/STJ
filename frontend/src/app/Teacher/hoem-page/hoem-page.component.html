@@ -1,0 +1,23 @@
+
+<p>
+    <mat-toolbar>
+      <span>Sri Taralabalu Jagadguru English Medium High School</span>
+    </mat-toolbar><br>
+  </p>
+ <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <button mat-stroked-button (click)="Profile()">Profile</button>
+        <button mat-stroked-button *ngIf="role" (click)="Attendance()">Upload Attendance</button>
+        <button mat-stroked-button *ngIf="role">Upload Notes</button>
+        <button mat-stroked-button *ngIf="classTeacher" >Manage Students</button>
+        <button mat-stroked-button *ngIf="classTeacher">Update Student Marks</button>
+        <button mat-stroked-button *ngIf="classTeacher">Promte Students</button>
+    </mat-drawer>
+    
+    <mat-drawer-content>
+        <h1 style="text-align: center;">Home Page</h1>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+

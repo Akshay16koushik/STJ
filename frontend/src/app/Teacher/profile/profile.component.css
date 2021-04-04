@@ -1,0 +1,15 @@
+mat-card {
+    width: 30%;
+    height: fit-content;
+    align-items: center;
+    align-content: center;
+    margin: 1rem auto;
+    
+  }
+  table{
+      border: whitesmoke;
+      margin: 1rem;
+      border-radius: 1rem;
+      text-align: left;
+  }
+  

@@ -1,0 +1,31 @@
+mat-card {
+    width:fit-content;
+    height: 40%;
+    align-items: center;
+    align-content: center;
+    margin: 1rem auto;
+    margin-top: 5%;
+    background-color:white;
+   
+  }
+  mat-sidenav-content {
+    height: 100vh;
+  }
+  button{
+      width: 100%;
+      border: hidden;
+  }
+mat-sidenav{
+    width: 15%;
+    background-color:rgb(255, 255, 255);
+}
+.red-snackbar{
+  background-color: rgb(153, 50, 50);
+  color:lightgoldenrodyellow;
+}
+  
+
+.green-snackbar{
+  background-color: rgb(29, 102, 29);
+  color:lightgreen;
+}

@@ -1,0 +1,69 @@
+<div>
+  <button mat-mini-fab color="warm" aria-label="Example icon button with a filter ist icon" (click)="back()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<br><br>
+<h1 style="text-align: center;" >Edit Student  Details</h1>
+<mat-card>
+  <form [formGroup]="formValues" (ngSubmit)="EditStudent(formValues)" >
+    <mat-form-field>
+      <mat-label>Register Number</mat-label>
+      <input matInput  formControlName="studentRegisterNumber"  required>
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput  formControlName="studentName"  required>
+        </mat-form-field> <br><br>
+        <mat-form-field>
+          <mat-label>Board</mat-label>
+          <input matInput  formControlName="studentBoard"  required>
+        </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Sex</mat-label>
+          <input matInput  formControlName="studentSex"  required>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Blood Group</mat-label>
+          <input matInput formControlName="studentBloodGroup"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label> Father Name</mat-label>
+          <input matInput  formControlName="studentFatherName"  required>
+        </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Mother Name</mat-label>
+          <input matInput  formControlName="studentMotherName"  required>
+        </mat-form-field> <br><br>
+        <mat-form-field>
+          <mat-label>Existing Address</mat-label>
+          <input matInput  formControlName="studentExistingAddress"  required>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput  formControlName="studentParmanentAddress"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label> Fee</mat-label>
+          <input matInput  formControlName="studentFee"  required>
+        </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Remaining Fee</mat-label>
+          <input matInput  formControlName="studentRemainingFee"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Student Class</mat-label>
+          <input matInput  formControlName="studentClass"  required>
+        </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <mat-label>Phonenumber</mat-label>
+          <input matInput  formControlName="parentNumber"  required>
+        </mat-form-field><br><br>
+        <mat-form-field>
+          <mat-label>Board</mat-label>
+          <input matInput  formControlName="studentBoard"  required>
+        </mat-form-field><br><br>
+         <button mat-raised-button color="primary" type="submit">Update</button>&nbsp;&nbsp;
+         <button mat-raised-button color="warn" type="reset">Clear</button>
+  </form>
+</mat-card>

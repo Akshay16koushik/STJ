@@ -1,0 +1,22 @@
+
+<p>
+    <mat-toolbar>
+      <span>Sri Taralabalu Jagadguru English Medium High School</span>
+      <button mat-button [matMenuTriggerFor]="beforeMenu" style="text-align: right;"><mat-icon>menu</mat-icon></button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item (click)="Studupdate()">View Your Profile</button>
+      <button mat-menu-item>View Subject Resources</button>
+      <button mat-menu-item (click)="StudResult()">Results</button>
+      <button mat-menu-item>Toppers List</button>
+      <button mat-menu-item>Extra Caricullar Activity</button>
+      <button mat-menu-item (click)=Logout()>Logout</button>
+    </mat-menu>
+    </mat-toolbar><br>
+  </p>
+
+
+
+
+
+
+

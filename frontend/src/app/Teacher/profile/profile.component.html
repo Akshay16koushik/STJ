@@ -1,0 +1,58 @@
+<mat-card>
+    <h1 style="text-align: center;font-family: monospace;">Your Details</h1>
+   <table>
+       <tr>
+           <th>Name :</th>
+           <td>{{Name}}</td>
+       </tr>
+       <br>
+       <tr>
+        <th>ID :</th>
+        <td>{{id}}</td>
+    </tr>
+    <br>
+       <tr>
+        <th>Age :</th>
+        <td>{{age}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Gender :</th>
+        <td>{{Gender}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Designantion :</th>
+        <td>{{designation}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Assigned Classes :</th>
+        <td>
+        <div *ngFor="let item of Classes">
+            {{item}}Class
+        </div></td>
+    </tr>
+    <br>
+    <tr>
+        <th>Board</th>
+        <td>{{Board}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Phone Number :</th>
+        <td>{{phon}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Subjects :</th>
+        <td>{{Subjects}}</td>
+    </tr>
+    <br>
+    <tr>
+        <th>Address :</th>
+        <td>{{Address}}</td>
+    </tr>
+   
+   </table>
+</mat-card>

@@ -1,0 +1,19 @@
+mat-button{
+    align-items: left;
+}
+
+.example-container {
+    width: 1820px;
+    height: 865px;
+    margin: 10px;
+    background-color: ghostwhite;
+  }
+  mat-drawer{
+      width: 200px;
+      background-color:snow
+  }
+  button{
+      width: 200px;
+      background: transparent;
+      border: transparent;
+  }

@@ -1,0 +1,7 @@
+mat-card {
+  width: 80%;
+  height: fit-content;
+  align-items: center;
+  align-content: center;
+  margin: 1rem auto;
+}
